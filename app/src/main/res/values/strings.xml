@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">lecture6</string>
+    <string-array name="countries_array">
+        <item>Select a country</item>
+        <item>Pakistan</item>
+        <item>India</item>
+        <item>UAE</item>
+        <!-- Add more countries here as needed -->
+    </string-array>
+
+    <string-array name="city_array">
+        <item>Islamabad</item>
+        <item>Lahore</item>
+        <item>Karachi</item>
+    </string-array>
+
+</resources>

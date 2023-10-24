@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    >
+
+
+    <!-- Back Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bbBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_clear_24"
+        android:text="Item"
+        android:textSize="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginStart="4dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/imageuploadphoto"
+        android:layout_below="@+id/bbBack"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:drawableTop="@drawable/outline_camera_alt_24"
+        android:text="Upload Image"
+        android:textSize="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginStart="80dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/imageuploadvideo"
+        android:layout_below="@+id/bbBack"
+
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:drawableTop="@drawable/outline_videocam_25"
+        android:text="Upload Video"
+        android:textSize="10dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginStart="210dp"/>
+
+    <TextView
+        android:id="@+id/textViewItemName"
+        android:layout_below="@+id/imageuploadphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:textSize="15sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewItemName"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:boxBackgroundMode="none"
+        android:background="@drawable/rounded_edit_text"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Item Name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewHourlyRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hourly Rate"
+        android:textSize="15sp"
+
+        android:layout_below="@+id/textInputLayoutItemName"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutHourlyRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHourlyRate"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundMode="none"
+        android:background="@drawable/rounded_edit_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextHourlyRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Hourly Rate"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="15sp"
+        android:layout_below="@+id/textInputLayoutHourlyRate"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDescription"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundMode="none"
+        android:background="@drawable/rounded_edit_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Description"
+
+            android:inputType="textMultiLine"
+            android:lines="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textSize="15sp"
+        android:layout_below="@+id/textInputLayoutDescription"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCity"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rounded_edit_text"
+
+        android:layout_marginEnd="16dp"
+        android:spinnerMode="dropdown" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonpostitem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Post Item"
+        android:layout_below="@+id/spinnerCity"
+        android:layout_marginTop="40dp"
+        android:background="#EC9007"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>

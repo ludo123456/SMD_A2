@@ -1,0 +1,204 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    >
+
+
+    <!-- Back Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bbBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_arrow_back_24"
+        android:text="Edit Profile"
+        android:textSize="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginStart="4dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonsavechanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Changes?"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="#EC9007" />
+
+
+
+    <LinearLayout
+        android:id="@+id/nameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bbBack"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_marginTop="5dp"
+            android:hint="Enter your name" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emailLayoutRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameLayout"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/editTextEmailRegister"
+            android:layout_width="match_parent"
+            android:hint="Enter your email"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_marginTop="5dp"
+            android:inputType="textEmailAddress" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contactLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailLayoutRegister"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Number" />
+
+        <EditText
+            android:id="@+id/editTextContact"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_marginTop="5dp"
+            android:hint="Enter your contact number"
+            android:inputType="phone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/countryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contactLayout"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country" />
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_marginTop="5dp"
+            android:hint="Select your country" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countryLayout"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City" />
+
+        <Spinner
+            android:id="@+id/spinnerCity"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_marginTop="5dp"
+            android:hint="Select your city" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profileimageuploadphoto"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:drawableTop="@drawable/outline_camera_alt_24"
+        android:text="Upload Profile Image"
+        android:textSize="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="425dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginStart="80dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/coverimageuploadphoto"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:drawableTop="@drawable/outline_camera_alt_24"
+        android:text="Upload Cover Image"
+        android:textSize="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="425dp"
+        android:layout_marginLeft="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginStart="200dp"/>
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/profileimageuploadphoto"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Profile Image" />
+
+    <ImageView
+        android:id="@+id/coverImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/coverimageuploadphoto"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="200dp"
+
+        android:scaleType="centerCrop"
+        android:contentDescription="Cover Image" />
+
+</RelativeLayout>
